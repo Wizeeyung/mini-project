@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/portfolio.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <script src="https://kit.fontawesome.com/4c328274fa.js" crossorigin="anonymous"></script>
+  <style>@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,100&display=swap');</style>
+  <script defer src="js/portfolio.js"></script>
+  <title>Samson Portfolio Website</title>
+</head>
+<body>
+  <div class="general-container">
+    <div id="header" class="header">
+      <div class="container">
+        <nav class="nav-tab">
+          <img src="images/my logo.png">
+          <ul class="nav-links" id="nav-menu">
+            <li><a href="#header" onclick="closemenu()">Home</a></li>
+            <li><a href="#About" onclick="closemenu()">About</a></li>
+            <li><a href="#Services" onclick="closemenu()">Services</a></li>
+            <li><a href="#Portfolio" onclick="closemenu()">Portfolio</a></li>
+            <li><a href="#gallery" onclick="closemenu()">My Gallery</a></li>
+            <li><a href="#Contact" onclick="closemenu()">Contact Me</a></li>
+            <i class="fa-sharp fa-solid fa-xmark" onclick="closemenu()"></i>
+          </ul>
+          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+          <p>UI/UX Designer</p>
+          <h1>Hi i'm <span>Samson</span> <br>from Nigeria</h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- About session -->
+    <div id="About" class="About">
+      <article class="about-row">
+        <div class="about-column1">
+          <img class="img-2" src="images/bg2.png" alt="samson">
+        </div>
+        <div class="about-column2">
+          <h2 class="sub-title">About Me</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nam et commodo leo. Etiam porta congue diam eu interdum. 
+            Morbi iaculis nulla at placerat elementum. Cras dictum velit quis urna lobortis hendrerit. Cras sagittis erat felis,
+            vitae lobortis elit ornare sit amet. In sit amet fermentum felis. Vivamus et tortor eu sapien sodales fringilla a non
+             augue. Aliquam dignissim neque velit,id posuere neque rhoncus in. Interdum et malesuada fames ac ante ipsum primis.
+          </p>
+          <div class="tab-titles">
+            <p class="tab-links active-links" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+            <p class="tab-links" onclick="opentab('education')" >Education</p>
+          </div>
+          <div class="tab-clicks active-tab" id="skills">
+            <ul>
+              <li><span>UI/UX</span><br>Designing web apps/ interface</li>
+              <li><span>UI/UX</span><br>Designing web apps/ interface</li>
+              <li><span>UI/UX</span><br>Designing web apps/ interface</li>
+            </ul>
+
+          </div>
+          <div class="tab-clicks" id="experience">
+            <ul>
+              <li><span>2021- 2017</span><br>Designing web apps/ interface</li>
+              <li><span>2016-2018</span><br>Designing web apps/ interface</li>
+              <li><span>2010-2020</span><br>Designing web apps/ interface</li>
+            </ul>
+
+          </div>
+          <div class="tab-clicks" id="education">
+            <ul>
+              <li><span>UI/UX</span><br>Designing web apps/ interface</li>
+              <li><span>UI/UX</span><br>Designing web apps/ interface</li>
+              <li><span>UI/UX</span><br>Designing web apps/ interface</li>
+            </ul>
+
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- .........Services ............ -->
+    <div id="Services" class="Services">
+      <div class="services-container">
+        <h2 class="sub-title">My Services</h2>
+        <div class="services-list">
+          <div>
+            <i class="fa-solid fa-code"></i>
+            <h3>Web Design</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nam et commodo leo. Etiam porta congue diam eu interdum. 
+              Morbi iaculis nulla at placerat elementum.</p>
+            <a href="#">Learn more</a>
+          </div>
+          <div>
+            <i class="fa-sharp fa-solid fa-crop"></i>
+            <h3>UI/UK Design</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nam et commodo leo. Etiam porta congue diam eu interdum. 
+              Morbi iaculis nulla at placerat elementum.</p>
+            <a href="#">Learn more</a>
+          </div>
+          <div>
+            <i class="fa-brands fa-app-store-ios"></i>
+            <h3>App Design</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nam et commodo leo. Etiam porta congue diam eu interdum. 
+              Morbi iaculis nulla at placerat elementum.</p>
+            <a href="#">Learn more</a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- .............3by3 Gallery .........-->
+    <div id="Portfolio" class="portfolio">
+      <h2 class="sub-title">My Portfolio</h2>
+      <p class="carousel-body">Click on the images in the gallery to view more</p>
+      <div class="gallery" id="gallery"></div>
+    </div>
+
+    <!-- ............Carousel......... -->
+    <div id="gallery" class="my-work">
+      <h2 class="sub-title">My Gallery</h2>
+      <p class="carousel-body">Hover on the carousel to glance through the images</p>
+      <div class="carousel">
+        <nav>
+          <a href="#" id="carouselPrev">&#X2b05;</a>
+          <a href="#" id="carouselNext">&#X2b95;</a>
+        </nav>
+        <div class="carousel-images" id="carouselImages"></div>
+        <p class="carousel-captions" id="carouselCaptions"></p>
+    
+      </div>
+    </div>
+
+    <!-- ...........Contact Us................ -->
+    <div id="Contact" class="contact">
+      <div class="contact-container">
+        <div class="row">
+          <div class="contact-left">
+            <h2 class="sub-title">Contact Me</h2>
+            <p><i class="fa-sharp fa-regular fa-envelope"></i>ogunbanwosamson@gmail.com</p>
+            <p><i class="fa-solid fa-phone-volume"></i>+447769393274</p>
+            <div class="social-icons">
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https:instagram.com/i_am_wizeeyung" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <a href="images/OGUNBANWO SAMSON Resume.pdf" download class="button-cv">Download CV</a>
+          </div>
+          <div class="contact-right">
+            <form name="submit-to-google-sheet">
+              <input type="text" name="Name" placeholder="Your Name" required>
+              <input type="email" name="Email" placeholder="Your Email" required>
+              <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+              <button type="submit" class="button-cv">Submit</button>
+            </form>
+            <span id="msg"></span>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <!-- ..........footer........... -->
+  <footer>
+    &copy; wizeeyung 2023
+  </footer>
+  
+</body>
+</html>
